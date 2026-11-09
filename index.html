@@ -1,0 +1,35 @@
+<!doctype html><html lang="en"><head><title>Shubham Patil · UX / Product Designer</title><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=DM+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css"><script src="early.js"></script></head>
+<body data-page="home" id="top">
+<section class="h-sec bg-cream"><div class="wrap"><div class="h-stage">
+<p class="h-intro">I'm a product and UX designer who untangles messy problems and turns them into clear, useful digital experiences.</p>
+<svg viewBox="0 0 420 200" fill="none" stroke="#6979E8" stroke-width="4" stroke-linecap="round" class="h-squig"><path d="M10 120c60-90 140-100 120-40s-110 70-80 10 120-60 160-20 40 70-10 60-30-60 30-70 90 30 150 30"/></svg>
+<div class="h-art"><div class="h-arch"><img src="images/portrait.jpg" data-b="images/portrait" alt="Shubham Patil" onerror="nx(this)"></div>
+<span class="stk" style="left:-50px;top:-8px;transform:rotate(-6deg)">UX Designer</span>
+<span class="stk p" style="right:-120px;top:20%;transform:rotate(5deg)">Product Thinker</span>
+<span class="stk b" style="left:-70px;bottom:6%;transform:rotate(4deg)">Problem Solver</span>
+<span class="stk w" style="right:-70px;bottom:24%;transform:rotate(-4deg)">Mumbai, IN</span>
+<span class="stk c" style="right:-30px;bottom:-14px;transform:rotate(3deg)"><i class="dot"></i>Open to work</span></div>
+<h1 class="h-word"><span>Shubham</span><span>Patil</span></h1>
+</div>
+<div class="hero-foot"><p class="script">scroll down to explore ↓</p><div style="display:flex;gap:12px;flex-wrap:wrap"><a class="btn" href="work.html">See my work</a><a class="btn sec" href="about.html">About me</a></div></div></div></section>
+<div data-mq="lime"></div>
+<section class="bg-blue"><div class="wrap"><p class="label">My philosophy</p>
+<h2 class="big-s" style="margin-top:20px">I don't just design interfaces. I <em class="em-l">untangle</em> experiences.</h2>
+<div class="two"><p class="lead">I like walking into complicated situations, finding the one problem hiding at the centre, and turning scattered ideas into something simple that actually works.</p>
+<div class="qcard">✺ Good design isn't just about how something looks. It's about understanding why something exists and making it work better.</div></div></div></section>
+<section class="bg-cream grid-paper"><div class="wrap"><p class="label">Selected work</p>
+<h2 style="margin-top:16px">Things I've <em class="em-c">untangled</em></h2><p class="script" style="margin-top:12px">more landing soon →</p>
+<div class="work" id="featured"></div>
+<p style="text-align:center;margin-top:72px"><a class="btn" href="work.html">View all work</a></p></div></section>
+<section class="bg-coral" style="padding-bottom:80px"><div class="wrap"><h2>Currently on my desk</h2><p class="label" style="margin-top:12px">places my brain has been lately</p></div>
+<div class="rail" id="rail"></div></section>
+<section class="bg-cream"><div class="wrap split"><div class="photo-w"><div class="photo"><img src="images/about.jpg" data-b="images/about" alt="Shubham" onerror="nx(this)"></div><span class="script" style="position:absolute;right:-10px;top:-24px;transform:rotate(6deg);z-index:3;font-size:34px">that's me!</span></div>
+<div><h2 style="font-size:clamp(40px,5vw,72px)">A designer who asks <em class="em-c">why</em> first.</h2><p class="lead" style="margin:24px 0">Edit me: I studied IT engineering, worked with networks, then fell for advertising and design. Now I bring all three into UX. I start with the question behind the question.</p>
+<a class="btn sec" href="about.html">More about me →</a><div class="chips" style="margin-top:32px"><span class="chip">UX Research</span><span class="chip">Prototyping</span><span class="chip">Visual Storytelling</span></div></div></div></section>
+<section class="bg-lime"><div class="wrap"><h2 class="big-s">Got something <em class="em-c">tangled?</em> Let's talk.</h2>
+<div class="flinks" style="margin:40px 0 0" id="ctaLinks"></div></div></section>
+<script src="projects.js"></script><script src="app.js"></script>
+<script>
+['Sketching wireframes at 2am','A very organised mess','Research notes','Playlist while designing','Chai count: too many'].forEach((c,i)=>{rail.insertAdjacentHTML('beforeend','<figure><div class="pic">'+img('images/desk'+(i+1),c)+'</div><figcaption class="label">'+c+'</figcaption></figure>')});
+ctaLinks.innerHTML='<a class="btn" href="mailto:'+SITE.email+'">'+SITE.email+'</a><a class="btn sec ext" href="'+SITE.linkedin+'">LinkedIn</a><a class="btn sec ext" href="'+SITE.behance+'">Behance</a>';
+</script></body></html>

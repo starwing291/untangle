@@ -1,0 +1,21 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Add a project</title><link rel="stylesheet" href="style.css">
+<style>body{padding:40px 20px}.box{max-width:720px;margin:0 auto}label{display:block;margin:16px 0 4px;font-weight:600}input,select{width:100%;padding:12px;border:1.5px solid var(--ink);border-radius:12px;font:16px var(--sans);background:#fff}pre{background:var(--ink);color:var(--lime);padding:20px;border-radius:16px;white-space:pre-wrap;margin-top:12px}ol li{margin:8px 0}</style></head>
+<body><div class="box"><h2 style="font-size:56px">Add a <em class="em-c">project</em></h2><p>Fill this in. Copy the code it makes. Paste it into <b>projects.js</b>. Done. (This page is only for you, it is not linked from your site.)</p>
+<label>Project name</label><input id="t" placeholder="Angel"><label>Short subtitle</label><input id="s" placeholder="Dynamic Icon Project">
+<label>Category</label><select id="c"><option>UX / UI</option><option>Product / UX Design</option><option>Web / UI Design</option><option>Visual / UI Design</option></select>
+<label>Card colour</label><select id="k"><option>coral</option><option>lime</option><option>pink</option><option>blue</option></select>
+<label>How many numbered images (01, 02, 03...)?</label><input id="n" type="number" value="6" min="1">
+<label>One line about it</label><input id="d" placeholder="What it is and what you did"><label>Your role</label><input id="r" value="Designer"><label>Tools</label><input id="o" value="Figma">
+<label>Behance link for this project</label><input id="b" value="https://www.behance.net/shubhampatil119">
+<h3 style="margin-top:32px;font-size:32px">1. Paste this into projects.js</h3><pre id="out"></pre><button class="btn" onclick="navigator.clipboard.writeText(out.textContent);this.textContent='Copied'">Copy code</button>
+<h3 style="margin-top:32px;font-size:32px">2. Then do this</h3><ol id="steps"></ol></div>
+<script>
+const g=i=>document.getElementById(i).value;
+function up(){const slug=(g('t')||'project').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+out.textContent=`  ,{ slug: "${slug}", title: "${g('t')}", sub: "${g('s')}",
+    cat: "${g('c')}", year: "2026", color: "${g('k')}", count: ${g('n')},
+    desc: "${g('d')}", role: "${g('r')}", tools: "${g('o')}",
+    behance: "${g('b')}" }`;
+steps.innerHTML=`<li>In the <b>images</b> folder, create a folder named <b>${slug}</b></li><li>Put the cover image inside it, named <b>cover.jpg</b></li><li>Put your project images inside, named <b>01.jpg, 02.jpg ... ${String(g('n')).padStart(2,'0')}.jpg</b> in the order you want them stacked</li><li>In projects.js, paste the code just before the final <b>];</b> line</li><li>Save, refresh the site (Ctrl+F5), then upload the folder to Netlify again</li>`}
+document.querySelectorAll('input,select').forEach(e=>e.oninput=up);up();
+</script></body></html>
